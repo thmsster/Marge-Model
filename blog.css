@@ -1,0 +1,608 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #970808;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    overflow: visible !important;
+    z-index: 1000;
+    flex-shrink: 0;
+}
+
+.logo {
+    flex-shrink: 0;
+    display: block;
+    max-height: 110px;
+    width: auto;
+}
+
+nav {
+    position: absolute;
+    left: 50%;                  
+    transform: translateX(-50%);
+    z-index: 2000;
+    overflow: visible !important;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    overflow: visible !important;
+}
+
+nav ul li {
+    overflow: visible !important;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    font-family: 'Inter', 'Arial', sans-serif;
+}
+
+nav ul li.dropdown {
+    position: relative;
+    overflow: visible !important;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #cbcbcb;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999 !important;
+    overflow: hidden !important;
+    margin-top: 5px;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    width: 100%;
+    overflow: hidden !important;
+    position: relative;
+}
+
+.dropdown-menu li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    border-bottom: none;
+    background-color: transparent;
+    text-align: left;
+    font-family: 'Inter', 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+    position: static;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #a7a7a7;
+    color: #000000;
+}
+
+.dropdown-menu li a::after {
+    display: none !important;
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    flex-shrink: 0;
+}
+
+.social-icons img {
+    display: block;
+}
+
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex: 1 0 auto;
+}
+
+section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 25px 100px;
+    border: none;
+    margin: 0;
+    overflow: visible !important;
+}
+
+section h2 {
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.blog-section {
+    height: auto;
+    min-height: 1746px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
+.blog-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 3.36px;
+    font-family: 'CHOCOGOM', sans-serif;
+    -webkit-text-stroke: 1px #000000;
+}
+
+.blog-grid {
+    width: 100%;
+    max-width: 1324px;
+    margin: 0 auto;
+}
+
+.blog-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+.third-row {
+    gap: 62px;
+    justify-content: flex-start;
+}
+
+.blog-item {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.blog-image {
+    width: 100%;
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+}
+
+.blog-caption {
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    font-weight: 400;
+}
+
+.photo-5 {
+    transform: translateY(-100px);
+}
+
+.photo-8 {
+    transform: translateY(-200px);
+}
+
+footer {
+    background-color: #970808;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;        
+    justify-content: space-between; 
+    padding-left: 100px;
+    padding-right: 100px;
+    flex-shrink: 0;
+    position: relative;          
+}
+
+.copyright {
+    position: absolute;       
+    left: 50%;                  
+    transform: translateX(-50%); 
+    bottom: 20px;                
+    font-size: 10pt;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;               
+}
+
+.copyright p {
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'Inter', 'Arial', sans-serif;
+}
+
+nav > ul > li > a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav > ul > li > a:hover {
+    color: #a7a7a7;
+}
+
+nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #a7a7a7;
+    transition: width 0.3s ease;
+}
+
+nav > ul > li > a:hover::after {
+    width: 100%;
+}
+
+nav > ul > li.dropdown > a::after {
+    display: none;
+}
+
+.social-icons a{
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover{
+    transform: scale(1.1);
+}
+
+.blog-image {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blog-image img {
+    transition: transform 0.3s ease;
+}
+
+.blog-item:hover .blog-image {
+    transform: scale(1.01);
+}
+
+.blog-item:hover .blog-image img {
+    transform: scale(1.01);
+}
+
+
+@media (max-width: 768px) {
+    /* Сброс позиционирования для мобильной версии */
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 80px;
+        min-height: 80px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+    
+    .logo img {
+        height: 45px;
+        width: auto;
+    }
+
+    /* Скрываем десктопную навигацию */
+    nav {
+        position: fixed !important;
+        top: 80px !important;
+        right: -280px !important;
+        left: auto !important;
+        transform: none !important;
+        width: 280px !important;
+        max-width: 280px !important;
+        height: calc(100vh - 80px) !important;
+        background-color: #970808 !important;
+        transition: right 0.3s ease !important;
+        z-index: 9999 !important;
+        padding: 20px !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    nav.active {
+        right: 0 !important;
+    }
+
+    nav ul {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: flex-start !important;
+    }
+
+    nav ul li {
+        width: 100% !important;
+    }
+
+    nav ul li a {
+        font-size: 16px !important;
+        white-space: normal !important;
+        display: block !important;
+    }
+
+    /* Бургер-кнопка */
+    .burger-btn {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10000;
+        margin-left: auto;
+    }
+
+    .burger-btn span {
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .burger-btn.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .burger-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-btn.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Стили для выпадающих меню */
+    nav ul li.dropdown {
+        position: relative;
+    }
+
+    nav ul li.dropdown > a {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background-color: rgba(255, 255, 255, 0.15);
+        min-width: auto;
+        display: none;
+        margin-top: 8px;
+        margin-left: 0px;
+        border-radius: 8px;
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .dropdown-menu li {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        list-style: none;
+    }
+
+    .dropdown-menu li a {
+        color: #ffffff;
+        padding: 12px 16px;
+        margin: 0;
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        text-align: left;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease;
+        line-height: 1.4;
+    }
+
+
+    .dropdown-menu li a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Убираем все возможные псевдоэлементы, которые могут мешать */
+    .dropdown-menu li a::before,
+    .dropdown-menu li a::after {
+        display: none !important;
+    }
+
+    nav ul li.dropdown.active .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Мобильные социальные иконки */
+    .mobile-social-icons {
+        display: flex !important;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .mobile-social-icons a {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-social-icons a:hover {
+        transform: scale(1.1);
+    }
+
+    .mobile-social-icons img {
+        width: 28px;
+        height: 28px;
+        filter: brightness(0) invert(1);
+    }
+
+    /* Скрываем десктопные социальные иконки */
+    header > .social-icons {
+        display: none !important;
+    }
+
+    /* Footer */
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: auto;
+        min-height: 100px;
+    }
+
+    footer .logo img {
+        height: 50px;
+    }
+
+    .copyright {
+        position: relative !important;
+        left: 20px;
+        transform: none !important;
+        bottom: auto !important;
+        margin-top: 50px;
+        font-size: 10px;
+    }
+
+       /* Добавьте эти стили для иконок социальных сетей в футере */
+    footer .social-icons {
+        gap: 10px;  /* уменьшаем расстояние между иконками */
+    }
+
+    footer .social-icons img {
+        width: 30px !important;  /* уменьшаем размер иконок */
+        height: 30px !important;
+    }
+
+        /* Blog Section - Mobile */
+    .blog-section {
+        padding: 20px 16px !important;
+    }
+
+    .blog-section h1 {
+        font-size: 48px !important;
+        font-family: 'CHOCOGOM', sans-serif;;
+        margin-bottom: 30px !important;
+    }
+
+    .blog-grid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .blog-row {
+        flex-direction: column !important;
+        gap: 30px !important;
+        margin-bottom: 20px !important;
+        padding-bottom: 10px;
+        align-items: center !important;
+    }
+
+    .third-row {
+        gap: 30px !important;
+    }
+
+    .blog-item {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+
+    .blog-image {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .blog-caption {
+        font-size: 14px;
+        margin-top: 0px;
+    }
+
+    /* Убираем трансформации для мобильных */
+    .photo-5,
+    .photo-8 {
+        transform: translateY(0) !important;
+    }
+
+
+}
+
+/* Десктопные стили - скрываем мобильные элементы */
+@media (min-width: 1024px) {
+    .burger-btn {
+        display: none !important;
+    }
+    
+    .mobile-social-icons {
+        display: none !important;
+    }
+}
